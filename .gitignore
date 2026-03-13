@@ -1,0 +1,14 @@
+# C# / .NET Ignore
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.csv
+
+# Mac
+.DS_Store
+
+# Windows
+Thumbs.db

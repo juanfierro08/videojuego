@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "0LNTHUaT43U=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\USUARIO\\Desktop\\videojuegos\\videojuegos.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\USUARIO\\.nuget\\packages\\csvhelper\\33.1.0\\csvhelper.33.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}
