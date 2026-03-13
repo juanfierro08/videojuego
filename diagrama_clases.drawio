@@ -1,0 +1,75 @@
+<mxfile host="app.diagrams.net" modified="2024-01-01T00:00:00.000Z" agent="Mozilla/5.0" version="21.0.0" type="device">
+  <diagram id="uml_videojuegos" name="Diagrama de Clases UML">
+    <mxGraphModel dx="1422" dy="792" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- Classes -->
+        <mxCell id="IPersistible" value="&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;IPersistible&lt;/b&gt;" vertex="1" parent="1">
+          <mxGeometry x="350" y="50" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Producto" value="&lt;b&gt;Producto (Abstract)&lt;/b&gt;" vertex="1" parent="1">
+          <mxGeometry x="350" y="160" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Videojuego" value="&lt;b&gt;Videojuego&lt;/b&gt;" vertex="1" parent="1">
+          <mxGeometry x="350" y="270" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Desarrollador" value="&lt;b&gt;Desarrollador&lt;/b&gt;" vertex="1" parent="1">
+          <mxGeometry x="150" y="160" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="RequisitosSistema" value="&lt;b&gt;RequisitosSistema&lt;/b&gt;" vertex="1" parent="1">
+          <mxGeometry x="550" y="270" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Jugador" value="&lt;b&gt;Jugador&lt;/b&gt;" vertex="1" parent="1">
+          <mxGeometry x="750" y="160" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="EquipoEsports" value="&lt;b&gt;EquipoEsports&lt;/b&gt;" vertex="1" parent="1">
+          <mxGeometry x="750" y="270" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Relations -->
+        <!-- Implementacion: Producto -> IPersistible -->
+        <mxCell id="edge1" value="" edge="1" parent="1" source="Producto" target="IPersistible">
+          <mxGeometry relative="1" as="geometry" />
+          <mxCell style="endArrow=block;dashed=1;endFill=0;" edge="1" parent="1" />
+        </mxCell>
+        <!-- Implementacion: Desarrollador -> IPersistible -->
+        <mxCell id="edge2" value="" edge="1" parent="1" source="Desarrollador" target="IPersistible">
+          <mxGeometry relative="1" as="geometry" />
+          <mxCell style="endArrow=block;dashed=1;endFill=0;" edge="1" parent="1" />
+        </mxCell>
+        <!-- Implementacion: Jugador -> IPersistible -->
+        <mxCell id="edge3" value="" edge="1" parent="1" source="Jugador" target="IPersistible">
+          <mxGeometry relative="1" as="geometry" />
+          <mxCell style="endArrow=block;dashed=1;endFill=0;" edge="1" parent="1" />
+        </mxCell>
+        
+        <!-- Herencia: Videojuego -> Producto -->
+        <mxCell id="edge4" value="" edge="1" parent="1" source="Videojuego" target="Producto">
+          <mxGeometry relative="1" as="geometry" />
+          <mxCell style="endArrow=block;endFill=0;" edge="1" parent="1" />
+        </mxCell>
+
+        <!-- Asociacion: Videojuego -> Desarrollador -->
+        <mxCell id="edge5" value="Asociación" edge="1" parent="1" source="Videojuego" target="Desarrollador">
+          <mxGeometry relative="1" as="geometry" />
+          <mxCell style="endArrow=classic;" edge="1" parent="1" />
+        </mxCell>
+
+        <!-- Composicion: Videojuego -> RequisitosSistema -->
+        <mxCell id="edge6" value="Composición" edge="1" parent="1" source="Videojuego" target="RequisitosSistema">
+          <mxGeometry relative="1" as="geometry" />
+          <mxCell style="endArrow=diamondThin;endFill=1;endSize=10;" edge="1" parent="1" />
+        </mxCell>
+
+        <!-- Agregacion: EquipoEsports -> Jugador -->
+        <mxCell id="edge7" value="Agregación" edge="1" parent="1" source="EquipoEsports" target="Jugador">
+          <mxGeometry relative="1" as="geometry" />
+          <mxCell style="endArrow=diamondThin;endFill=0;endSize=10;" edge="1" parent="1" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
