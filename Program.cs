@@ -13,7 +13,7 @@ namespace GameMaster
             bool salir = false;
             while (!salir)
             {
-                Console.WriteLine("\n=== SISTEMA DE GESTIÓN GAMEMASTER ===");
+                Console.WriteLine("\n=== SISTEMA DE GESTIÓN DE VIDEOJUEGOS ===");
                 Console.WriteLine("1. Gestión de Videojuegos");
                 Console.WriteLine("2. Gestión de Desarrolladoras");
                 Console.WriteLine("3. Gestión de Clientes");
@@ -158,4 +158,6 @@ namespace GameMaster
             }
         }
     }
+}
+
 }
