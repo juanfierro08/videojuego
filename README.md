@@ -1,25 +1,23 @@
-# Sistema de Gestión de Videojuegos y eSports
+# NexusGaming: Plataforma de eSports y Distribución Digital
 
-Este proyecto es una aplicación de consola en **C# (.NET 8)** que implementa principios de **Programación Orientada a Objetos (POO)** y persistencia de datos con archivos **CSV** utilizando la librería `CsvHelper`.
+Este proyecto es una aplicación de consola en **C# (.NET 8)** que implementa principios de **Programación Orientada a Objetos (POO)** y persistencia de datos mediante archivos **CSV** utilizando la librería `CsvHelper`.
 
-## Descripción del Problema
-La industria de los deportes electrónicos (eSports) y el desarrollo de videojuegos crece a un ritmo acelerado a nivel mundial. Sin embargo, muchas organizaciones, equipos competitivos y plataformas administradoras carecen de herramientas centralizadas para gestionar de forma eficiente la información de su ecosistema. Especialmente, es complejo mantener de manera consolidada el catálogo de videojuegos con sus distintos requisitos técnicos, los estudios o desarrolladores detrás de estos títulos, y los perfiles de los jugadores profesionales o casuales que participan. 
+## Descripción del Problema Computacional
+La industria moderna de los videojuegos enfrenta una fragmentación operativa: las plataformas que distribuyen y venden los títulos operan de manera independiente a las organizaciones que gestionan las ligas competitivas de eSports. Esto obliga a los **Estudios de Desarrollo** a gestionar sus productos en múltiples lugares y dificulta la centralización de datos respecto a qué títulos están activos en qué competiciones corporativas.
 
-Actualmente, estos datos suelen estar dispersos o no cuentan con un diseño estructurado bajo buenas prácticas de ingeniería de software. Esta falta de organización genera redundancia de información e incapacidad de escalar a nuevos modelos de negocio, dificultando su administración mediante operaciones básicas.
+Con el fin de centralizar esta información técnica y comercial, surge la necesidad de **NexusGaming**. Esta es una plataforma back-office que permite a los administradores registrar el catálogo de productos digitales, vincularlos con los estudios responsables, gestionar los motores gráficos y arquitecturas (requisitos) que los componen, y administrar las ligas competitivas asociadas.
 
-## Enunciado del Sistema
-Para resolver la problemática descrita, se solicita el desarrollo de un **Sistema de Gestión de Videojuegos**. Se construirá una aplicación de consola en C# implementando los pilares de la Programación Orientada a Objetos (POO). El sistema actuará como un repositorio central de información donde el usuario podrá administrar el ecosistema a través de menús interactivos, ejecutando las operaciones **CRUD** (Crear, Leer, Actualizar y Eliminar) sobre tres entidades fundamentales:
+## Enunciado del Sistema y Entidades
+El sistema provee menús interactivos que permiten realizar operaciones **CRUD completas** (Crear, Listar, Actualizar, Eliminar) sobre el ecosistema. Su arquitectura obedece estrictamente a los siguientes pilares de POO dictados para la entrega:
 
-1. **Videojuegos**: Registro de los títulos disponibles, su género y su precio. Internamente administra los requisitos mínimos de hardware que requieren para funcionar de manera indispensable (**Composición**). Cada juego está ligado de forma obligatoria al estudio responsable de su creación (**Asociación**).
-2. **Desarrolladores**: Catálogo de los estudios o empresas creadoras de software de la industria, registrando su nombre comercial y el país de origen donde operan.
-3. **Jugadores**: Repositorio de usuarios o atletas de eSports, manteniendo su nickname competitivo y nivel actual. Adicionalmente, el sistema simula la creación y gestión de Equipos Competitivos, a los cuales estos jugadores pueden pertenecer (**Agregación**).
+1. **Herencia (1):** Toda entidad vendible hereda de la clase base abstracta `ProductoDigital`, la cual define el comportamiento de cálculo de descuentos mediante polimorfismo, aplicado a `Videojuego`.
+2. **Asociación (1):** Cada `Videojuego` está fuertemente asociado comercialmente a un `EstudioDesarrollo` (organizador y creador).
+3. **Composición (1):** A nivel arquitectónico, un `Videojuego` está compuesto de una `EspecificacionTecnica` (Motor Gráfico). La existencia de este requerimiento técnico no tiene sentido si el videojuego es eliminado del catálogo.
+4. **Agregación (1):** Las `LigaEsports` gestionan la competición, incorporando y agrupando una lista de objetos de tipo `EquipoCompetitivo`. Si la liga finaliza de operar, los equipos corporativos siguen existiendo como entidades independientes.
+5. **Interfaz implementada (1):** Las entidades raíz cuentan con la interfaz `IPersistible` para garantizar su salvado modular en archivos .csv.
 
----
-
-## Requisitos POO Obligatorios
-El sistema implementa los siguientes requisitos exigidos por el entregable:
-1. **Herencia (1):** La clase `Videojuego` hereda de la clase base abstracta `Producto`.
-2. **Asociación (1):** La clase `Videojuego` se asocia con la clase `Desarrollador` mediante un identificador (`DesarrolladorId`).
-3. **Agregación (1):** La clase `EquipoEsports` contiene una lista de `Jugador` (los jugadores existen independientemente del equipo, es decir, si el equipo se disuelve, el jugador sigue existiendo en el sistema).
-4. **Composición (1):** La clase `Videojuego` instancia y destruye internamente la clase `RequisitosSistema`. Un requisito de hardware mínimo (OS, RAM) no puede vivir si no le pertenece a un videojuego registrado.
-5. **Interfaz implementada (1):** Todas las entidades persistidas a nivel de archivo incluyen la interfaz `IPersistible` para garantizar que expongan características vitales para su guardado en base de datos.
+## Requisitos Analíticos de Funcionalidad
+El sistema responde correctamente generando, listando, modificando y eliminando registros en los siguientes submódulos (mínimo 3 CRUDs operativos):
+- Módulo de Videojuegos
+- Módulo de Estudios de Desarrollo
+- Módulo de Ligas de eSports
