@@ -35,11 +35,10 @@ namespace GameMaster
         public string Genero { get; set; } = string.Empty;
        
         public Guid DesarrolladoraId { get; set; }
-        
+
         [Ignore] // Referencia en memoria
         public Desarrolladora? EstudioCreador { get; set; }
-        
-        
+        [Ignore]
         public List<RequisitoSistema> RequisitosMinimos { get; private set; }
 
         [Name("RequisitosRaw")]
@@ -59,8 +58,8 @@ namespace GameMaster
 
     public class RequisitoSistema
     {
-        public string Componente { get; set; } = string.Empty; // Ej. CPU, GPU
-        public string Especificacion { get; set; } = string.Empty; // Ej. i5 10400F, RTX 3060
+        public string Componente { get; set; } = string.Empty;
+        public string Especificacion { get; set; } = string.Empty;
     }
 
     public class Desarrolladora : IEntidad

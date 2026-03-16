@@ -17,7 +17,6 @@ namespace GameMaster
             _rutaArchivo = nombreArchivo;
         }
 
-        // --- READ: OBTENER TODOS LOS REGISTROS ---
         public List<T> Listar()
         {
             if (!File.Exists(_rutaArchivo)) return new List<T>();
@@ -39,7 +38,6 @@ namespace GameMaster
             csv.WriteRecords(datos);
         }
 
-        // --- CREATE: AÑADIR NUEVO REGISTRO ---
         public void Registrar(T item)
         {
             var catalogo = Listar();
@@ -52,7 +50,6 @@ namespace GameMaster
             Console.WriteLine("--> Registro creado con éxito.");
         }
 
-        // --- READ: MOSTRAR EN PANTALLA ---
         public void MostrarConsola()
         {
             var catalogo = Listar();
@@ -68,7 +65,6 @@ namespace GameMaster
             }
         }
 
-        // --- UPDATE: ACTUALIZAR EXISTENTE ---
         public void Actualizar(Guid idObjetivo, T itemEditado)
         {
             var catalogo = Listar();
@@ -87,7 +83,6 @@ namespace GameMaster
             }
         }
 
-        // --- DELETE: ELIMINAR REGISTRO ---
         public void Eliminar(Guid idObjetivo)
         {
             var catalogo = Listar();
