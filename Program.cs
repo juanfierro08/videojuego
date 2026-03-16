@@ -19,7 +19,7 @@ namespace GameMaster
                 Console.WriteLine("3. Gestión de Clientes");
                 Console.WriteLine("4. Salir");
                 Console.Write("Seleccione una opción: ");
-                
+
                 string? opcion = Console.ReadLine();
                 switch (opcion)
                 {
@@ -62,10 +62,10 @@ namespace GameMaster
                     Console.Write("Género: "); juego.Genero = Console.ReadLine() ?? "";
                     Console.Write("Precio: "); decimal.TryParse(Console.ReadLine(), out decimal precio); juego.Precio = precio;
                     Console.Write("Requisitos Generales (Ej. 8GB RAM, i5): "); juego.RequisitosRaw = Console.ReadLine() ?? "";
-                    
+
                     Console.Write("ID de Desarrolladora (Dejar vacío si no aplica): ");
                     if (Guid.TryParse(Console.ReadLine(), out Guid devId)) juego.DesarrolladoraId = devId;
-                    
+
                     dbVideojuegos.Registrar(juego);
                     break;
                 case "2": // Read
