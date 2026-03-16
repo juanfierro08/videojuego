@@ -18,7 +18,7 @@ Se han implementado las siguientes características clave:
 * **Catálogo Global (Agregación)**: La *Tienda* engloba comercialmente la lista completa del stock, pero dichos juegos existen independientemente de esta sucursal.
 
 ## Funcionalidad
-El proyecto es una aplicación de consola en **C#** que implementa **3 CRUDs completos** (Crear, Leer, Actualizar y Eliminar) respaldados mediante lectura y escritura de archivos **CSV** utilizando `CsvHelper`, cumpliendo con el estándar de una interfaz genérica `IEntidad` para modularidad.
+El proyecto es una aplicación de consola en **C#** que implementa **3 CRUDs completos** (Crear, Leer, Actualizar y Eliminar) respaldados mediante lectura y escritura de archivos **CSV** utilizando CsvHelper, cumpliendo con el estándar de una interfaz genérica IEntidad para modularidad.
 
 **Módulos de Gestión**:
 1. Videojuegos / Catálogo.
