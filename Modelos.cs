@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace GameMaster
 {
-    // --- INTERFAZ IMPLEMENTADA ---
+ 
     public interface IEntidad
     {
         Guid Id { get; set; }
