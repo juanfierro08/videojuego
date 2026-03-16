@@ -51,12 +51,11 @@ namespace GameMaster
             }
         }
 
-        // --- CRUD DE VIDEOJUEGOS ---
         static void GestionarVideojuegos(string operacion)
         {
             switch (operacion)
             {
-                case "1": // Create
+                case "1": 
                     var juego = new Videojuego();
                     Console.Write("Nombre: "); juego.Nombre = Console.ReadLine() ?? "";
                     Console.Write("Género: "); juego.Genero = Console.ReadLine() ?? "";
@@ -68,10 +67,10 @@ namespace GameMaster
 
                     dbVideojuegos.Registrar(juego);
                     break;
-                case "2": // Read
+                case "2":
                     dbVideojuegos.MostrarConsola();
                     break;
-                case "3": // Update
+                case "3": 
                     Console.Write("Ingrese el ID del Videojuego a actualizar: ");
                     if (Guid.TryParse(Console.ReadLine(), out Guid idActualizarV))
                     {
@@ -84,29 +83,28 @@ namespace GameMaster
                     }
                     else Console.WriteLine("Formato de ID inválido.");
                     break;
-                case "4": // Delete
+                case "4"
                     Console.Write("Ingrese el ID del Videojuego a eliminar: ");
                     if (Guid.TryParse(Console.ReadLine(), out Guid idEliminarV)) dbVideojuegos.Eliminar(idEliminarV);
                     else Console.WriteLine("Formato de ID inválido.");
                     break;
             }
         }
-
-        // --- CRUD DE DESARROLLADORAS ---
+    
         static void GestionarDesarrolladoras(string operacion)
         {
             switch (operacion)
             {
-                case "1": // Create
+                case "1": 
                     var dev = new Desarrolladora();
                     Console.Write("Nombre de Empresa: "); dev.NombreEmpresa = Console.ReadLine() ?? "";
                     Console.Write("País de Origen: "); dev.PaisOrigen = Console.ReadLine() ?? "";
                     dbDesarrolladoras.Registrar(dev);
                     break;
-                case "2": // Read
+                case "2": 
                     dbDesarrolladoras.MostrarConsola();
                     break;
-                case "3": // Update
+                case "3":
                     Console.Write("Ingrese el ID de la Desarrolladora a actualizar: ");
                     if (Guid.TryParse(Console.ReadLine(), out Guid idActualizarD))
                     {
@@ -117,7 +115,7 @@ namespace GameMaster
                     }
                     else Console.WriteLine("Formato de ID inválido.");
                     break;
-                case "4": // Delete
+                case "4":
                     Console.Write("Ingrese el ID de la Desarrolladora a eliminar: ");
                     if (Guid.TryParse(Console.ReadLine(), out Guid idEliminarD)) dbDesarrolladoras.Eliminar(idEliminarD);
                     else Console.WriteLine("Formato de ID inválido.");
@@ -125,21 +123,21 @@ namespace GameMaster
             }
         }
 
-        // --- CRUD DE CLIENTES ---
+   
         static void GestionarClientes(string operacion)
         {
             switch (operacion)
             {
-                case "1": // Create
+                case "1": 
                     var cli = new Cliente();
                     Console.Write("Nombre Completo: "); cli.NombreCompleto = Console.ReadLine() ?? "";
                     Console.Write("Correo Electrónico: "); cli.Correo = Console.ReadLine() ?? "";
                     dbClientes.Registrar(cli);
                     break;
-                case "2": // Read
+                case "2": 
                     dbClientes.MostrarConsola();
                     break;
-                case "3": // Update
+                case "3":
                     Console.Write("Ingrese el ID del Cliente a actualizar: ");
                     if (Guid.TryParse(Console.ReadLine(), out Guid idActualizarC))
                     {
@@ -150,7 +148,7 @@ namespace GameMaster
                     }
                     else Console.WriteLine("Formato de ID inválido.");
                     break;
-                case "4": // Delete
+                case "4":
                     Console.Write("Ingrese el ID del Cliente a eliminar: ");
                     if (Guid.TryParse(Console.ReadLine(), out Guid idEliminarC)) dbClientes.Eliminar(idEliminarC);
                     else Console.WriteLine("Formato de ID inválido.");
