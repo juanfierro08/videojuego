@@ -1,10 +1,10 @@
-# Sistema de Gestión de Tienda de Videojuegos "GameMaster"
+# Sistema de Gestión de Tienda de Videojuegos 
 
-Bienvenido al repositorio del Taller 1 de Programación Orientada a Objetos. Este proyecto implementa un sistema de gestión de backend por consola para la tienda de videojuegos **GameMaster**.
+Bienvenido al repositorio del Taller 1 de Programación Orientada a Objetos. Este proyecto implementa un sistema de gestión de backend por consola para la tienda de videojuegos.
 
 ## Enunciado del Sistema
 
-La tienda **GameMaster** requiere automatizar sus procesos diarios referentes a tres pilares fundamentales:
+La tienda requiere automatizar sus procesos diarios referentes a tres pilares fundamentales:
 1. **Gestión de Inventario (Videojuegos y Consolas)**: Monitorear el catálogo de productos disponibles para la venta.
 2. **Desarrolladoras**: Mantener un vínculo claro entre qué estudio desarrolló cada videojuego para gestionar pagos por licenciamiento.
 3. **Clientes**: Administrar la información de los compradores recurrentes para fidelizarlos en futuros lanzamientos.
