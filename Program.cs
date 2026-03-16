@@ -83,7 +83,7 @@ namespace GameMaster
                     }
                     else Console.WriteLine("Formato de ID inválido.");
                     break;
-                case "4"
+                case "4":
                     Console.Write("Ingrese el ID del Videojuego a eliminar: ");
                     if (Guid.TryParse(Console.ReadLine(), out Guid idEliminarV)) dbVideojuegos.Eliminar(idEliminarV);
                     else Console.WriteLine("Formato de ID inválido.");
