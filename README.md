@@ -12,7 +12,7 @@ La tienda requiere automatizar sus procesos diarios referentes a tres pilares fu
 Para lograr esto de manera eficiente y escalable, el sistema se ha construido utilizando los principios de **Programación Orientada a Objetos (POO)** en C# .NET. 
 
 Se han implementado las siguientes características clave:
-* **Herencia y Polimorfismo**: Productos base con derivaciones a `Videojuego` y `Consola`.
+* **Herencia y Polimorfismo**: Productos base con derivaciones a Videojuego y Consola.
 * **Asociación**: Cada Videojuego se asocia estructuralmente a una *Desarrolladora* creadora.
 * **Componentes Exclusivos (Composición)**: Cada juego administra sus propios _Requisitos de Sistema_ que no pueden existir aislados.
 * **Catálogo Global (Agregación)**: La *Tienda* engloba comercialmente la lista completa del stock, pero dichos juegos existen independientemente de esta sucursal.
