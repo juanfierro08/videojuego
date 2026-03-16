@@ -11,7 +11,7 @@ namespace GameMaster
         string ObtenerResumen();
     }
 
-    // --- CLASE BASE (Para Herencia) ---
+    // -- CLASE BASE (Para Herencia) --
     public abstract class Producto : IEntidad
     {
         public Guid Id { get; set; }
