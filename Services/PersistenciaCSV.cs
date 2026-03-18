@@ -15,6 +15,11 @@ namespace GameMaster
         public PersistenciaCSV(string nombreArchivo)
         {
             _rutaArchivo = nombreArchivo;
+            var directory = Path.GetDirectoryName(_rutaArchivo);
+            if (!string.IsNullOrEmpty(directory) && !Directory.Exists(directory))
+            {
+                Directory.CreateDirectory(directory);
+            }
         }
 
         public List<T> Listar()

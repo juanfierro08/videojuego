@@ -1,20 +1,20 @@
 <mxfile host="65bd71144e">
     <diagram id="DIAGRAM_ID" name="Clases GameMaster">
-        <mxGraphModel dx="1817" dy="664" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+        <mxGraphModel dx="2111" dy="393" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="IEntidad" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;interface&lt;br&gt;IEntidad&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ Id : Guid&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ ObtenerResumen() : string&lt;/p&gt;" style="html=1;whiteSpace=wrap;overflow=hidden;" parent="1" vertex="1">
+                <mxCell id="IEntidad" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;IEntidad&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ Id : Guid&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ ObtenerResumen() : string&lt;/p&gt;" style="html=1;whiteSpace=wrap;overflow=hidden;" parent="1" vertex="1">
                     <mxGeometry x="360" y="40" width="200" height="90" as="geometry"/>
                 </mxCell>
-                <mxCell id="Producto" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;abstract&amp;gt;&amp;gt;&lt;br&gt;Producto&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ Id : Guid&lt;br&gt;+ Nombre : string&lt;br&gt;+ Precio : decimal&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ ObtenerResumen() : string&lt;/p&gt;" style="html=1;whiteSpace=wrap;overflow=hidden;" parent="1" vertex="1">
+                <mxCell id="Producto" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Producto&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ Id : Guid&lt;br&gt;+ Nombre : string&lt;br&gt;+ Precio : decimal&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ ObtenerResumen() : string&lt;/p&gt;" style="html=1;whiteSpace=wrap;overflow=hidden;" parent="1" vertex="1">
                     <mxGeometry x="360" y="180" width="200" height="110" as="geometry"/>
                 </mxCell>
                 <mxCell id="Edge_IEntidad_Producto" style="endArrow=block;dashed=1;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;endFill=0;" parent="1" source="Producto" target="IEntidad" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="Videojuego" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Videojuego&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ Genero : string&lt;br&gt;+ DesarrolladoraId : Guid&lt;br&gt;+ EstudioCreador : Desarrolladora&lt;br&gt;+ RequisitosRaw : string&lt;br&gt;- RequisitosMinimos : List&amp;lt;RequisitoSistema&amp;gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ Videojuego()&lt;br&gt;+ ObtenerResumen() : string&lt;/p&gt;" style="html=1;whiteSpace=wrap;overflow=hidden;" parent="1" vertex="1">
-                    <mxGeometry x="220" y="340" width="240" height="180" as="geometry"/>
+                    <mxGeometry x="220" y="340" width="240" height="170" as="geometry"/>
                 </mxCell>
                 <mxCell id="Consola" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Consola&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ Fabricante : string&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ ObtenerResumen() : string&lt;/p&gt;" style="html=1;whiteSpace=wrap;overflow=hidden;" parent="1" vertex="1">
                     <mxGeometry x="490" y="340" width="200" height="90" as="geometry"/>
@@ -32,15 +32,10 @@
                     <mxGeometry width="50" height="50" relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="RequisitoSistema" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;RequisitoSistema&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ Componente : string&lt;br&gt;+ Especificacion : string&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;" style="html=1;whiteSpace=wrap;overflow=hidden;" parent="1" vertex="1">
-                    <mxGeometry x="240" y="550" width="200" height="90" as="geometry"/>
+                    <mxGeometry x="240" y="550" width="200" height="110" as="geometry"/>
                 </mxCell>
                 <mxCell id="Edge_Composicion" style="endArrow=open;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;startArrow=diamond;startFill=1;endFill=0;" parent="1" source="Videojuego" target="RequisitoSistema" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="2" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="Tienda">
-                    <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="70" y="520" as="targetPoint"/>
-                    </mxGeometry>
                 </mxCell>
                 <mxCell id="Tienda" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Tienda&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ NombreSucursal : string&lt;br&gt;+ InventarioVideojuegos : List&amp;lt;Videojuego&amp;gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ AgregarAlInventario(juego: Videojuego)&lt;/p&gt;" style="html=1;whiteSpace=wrap;overflow=hidden;" parent="1" vertex="1">
                     <mxGeometry x="-40" y="340" width="220" height="140" as="geometry"/>

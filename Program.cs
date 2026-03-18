@@ -1,14 +1,15 @@
+#pragma warning disable IDE0130 // El espacio de nombres no coincide con la estructura de carpetas
 using System;
 
 namespace GameMaster
 {
     class Program
     {
-        static PersistenciaCSV<Videojuego> dbVideojuegos = new PersistenciaCSV<Videojuego>("videojuegos.csv");
-        static PersistenciaCSV<Desarrolladora> dbDesarrolladoras = new PersistenciaCSV<Desarrolladora>("desarrolladoras.csv");
-        static PersistenciaCSV<Cliente> dbClientes = new PersistenciaCSV<Cliente>("clientes.csv");
+        static readonly PersistenciaCSV<Videojuego> dbVideojuegos = new(@"Data\videojuegos.csv");
+        static readonly PersistenciaCSV<Desarrolladora> dbDesarrolladoras = new(@"Data\desarrolladoras.csv");
+        static readonly PersistenciaCSV<Cliente> dbClientes = new(@"Data\clientes.csv");
 
-        static void Main(string[] args)
+        static void Main()
         {
             bool salir = false;
             while (!salir)
@@ -59,7 +60,8 @@ namespace GameMaster
                     var juego = new Videojuego();
                     Console.Write("Nombre: "); juego.Nombre = Console.ReadLine() ?? "";
                     Console.Write("Género: "); juego.Genero = Console.ReadLine() ?? "";
-                    Console.Write("Precio: "); decimal.TryParse(Console.ReadLine(), out decimal precio); juego.Precio = precio;
+                    Console.Write("Precio: "); 
+                    if (decimal.TryParse(Console.ReadLine(), out decimal precio)) juego.Precio = precio;
                     Console.Write("Requisitos Generales (Ej. 8GB RAM, i5): "); juego.RequisitosRaw = Console.ReadLine() ?? "";
 
                     Console.Write("ID de Desarrolladora (Dejar vacío si no aplica): ");
@@ -77,7 +79,8 @@ namespace GameMaster
                         var jEditado = new Videojuego();
                         Console.Write("Nuevo Nombre: "); jEditado.Nombre = Console.ReadLine() ?? "";
                         Console.Write("Nuevo Género: "); jEditado.Genero = Console.ReadLine() ?? "";
-                        Console.Write("Nuevo Precio: "); decimal.TryParse(Console.ReadLine(), out decimal p); jEditado.Precio = p;
+                        Console.Write("Nuevo Precio: "); 
+                        if (decimal.TryParse(Console.ReadLine(), out decimal p)) jEditado.Precio = p;
                         Console.Write("Nuevos Requisitos: "); jEditado.RequisitosRaw = Console.ReadLine() ?? "";
                         dbVideojuegos.Actualizar(idActualizarV, jEditado);
                     }

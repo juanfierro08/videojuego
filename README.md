@@ -2,6 +2,15 @@
 
 Bienvenido al repositorio del Taller 1 de Programación Orientada a Objetos. Este proyecto implementa un sistema de gestión de backend por consola para la tienda de videojuegos.
 
+## El Problema
+
+Actualmente, la tienda de videojuegos gestiona su inventario y base de clientes de forma manual o mediante herramientas genéricas (como hojas de cálculo aisladas), lo que ha derivado en los siguientes conflictos operativos:
+
+* **Inconsistencia de Datos**: No existe una relación directa entre los títulos y sus desarrolladoras, lo que dificulta el seguimiento de licencias y pagos de regalías.
+* **Pérdida de Información**: Al no contar con una capa de persistencia automatizada, los cambios realizados durante el día no se consolidan de manera segura, provocando errores en el stock real.
+* **Falta de Perfilamiento**: La carencia de un registro centralizado de clientes impide identificar quiénes son los compradores recurrentes, perdiendo oportunidades de fidelización en lanzamientos importantes.
+* **Complejidad Tecnológica**: La mezcla de productos (PC y Consolas) con requisitos técnicos distintos (procesador, RAM, almacenamiento) hace que la categorización manual sea propensa a errores humanos.
+
 ## Enunciado del Sistema
 
 La tienda requiere automatizar sus procesos diarios referentes a tres pilares fundamentales:
