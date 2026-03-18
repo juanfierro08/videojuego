@@ -8,6 +8,9 @@ namespace GameMaster
         static readonly PersistenciaCSV<Videojuego> dbVideojuegos = new(@"Data\videojuegos.csv");
         static readonly PersistenciaCSV<Desarrolladora> dbDesarrolladoras = new(@"Data\desarrolladoras.csv");
         static readonly PersistenciaCSV<Cliente> dbClientes = new(@"Data\clientes.csv");
+        
+        // Instancia para demostrar físicamente la relación de "Agregación"
+        static readonly Tienda miTiendaFisica = new() { NombreSucursal = "GameMaster Central" };
 
         static void Main()
         {
