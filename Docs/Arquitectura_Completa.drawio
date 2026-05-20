@@ -1,0 +1,115 @@
+<mxfile host="65bd71144e">
+    <diagram id="diagram1" name="Arquitectura UML">
+        <mxGraphModel dx="648" dy="399" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2000" pageHeight="1500" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="IEntidad" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;IEntidad&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ Id : Guid&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ ObtenerResumen() : string&lt;/p&gt;" style="html=1;whiteSpace=wrap;overflow=hidden;fillColor=none;strokeColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="600" y="50" width="180" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="Producto" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;abstract&amp;gt;&amp;gt;&lt;br&gt;Producto&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ Id : Guid&lt;br&gt;+ Nombre : string&lt;br&gt;+ Precio : decimal&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ ObtenerResumen() : string&lt;/p&gt;" style="html=1;whiteSpace=wrap;overflow=hidden;fillColor=none;strokeColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="600" y="200" width="180" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="Videojuego" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Videojuego&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ Genero : string&lt;br&gt;+ DesarrolladoraId : Guid&lt;br&gt;+ RequisitosRaw : string&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ ObtenerResumen() : string&lt;/p&gt;" style="html=1;whiteSpace=wrap;overflow=hidden;fillColor=none;strokeColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="400" width="220" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="Consola" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Consola&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ Fabricante : string&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ ObtenerResumen() : string&lt;/p&gt;" style="html=1;whiteSpace=wrap;overflow=hidden;fillColor=none;strokeColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="750" y="400" width="180" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="Cliente" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Cliente&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ Id : Guid&lt;br&gt;+ NombreCompleto : string&lt;br&gt;+ Correo : string&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ ObtenerResumen() : string&lt;/p&gt;" style="html=1;whiteSpace=wrap;overflow=hidden;fillColor=none;strokeColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="900" y="50" width="180" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="Pedido" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Pedido&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ Id : Guid&lt;br&gt;+ ClienteId : Guid&lt;br&gt;+ Total : decimal&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ MostrarPedido() : void&lt;/p&gt;" style="html=1;whiteSpace=wrap;overflow=hidden;fillColor=none;strokeColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="900" y="200" width="180" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="Desarrolladora" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Desarrolladora&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ Id : Guid&lt;br&gt;+ NombreEmpresa : string&lt;br&gt;+ PaisOrigen : string&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ ObtenerResumen() : string&lt;/p&gt;" style="html=1;whiteSpace=wrap;overflow=hidden;fillColor=none;strokeColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="100" y="400" width="180" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="Tienda" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Tienda&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ NombreSucursal : string&lt;br&gt;+ Inventario : List&amp;lt;Producto&amp;gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ AgregarAlInventario()&lt;/p&gt;" style="html=1;whiteSpace=wrap;overflow=hidden;fillColor=none;strokeColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="100" y="200" width="220" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="RequisitoSistema" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;record&amp;gt;&amp;gt;&lt;br&gt;RequisitoSistema&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ Componente : string&lt;br&gt;+ Especificacion : string&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;/p&gt;" style="html=1;whiteSpace=wrap;overflow=hidden;fillColor=none;strokeColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="600" width="200" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="IPersistenciaCSV" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;IPersistenciaCSV&amp;lt;T&amp;gt;&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ Registrar(T)&lt;br&gt;+ Listar() : List&amp;lt;T&amp;gt;&lt;br&gt;+ Actualizar(id, T)&lt;br&gt;+ Eliminar(id)&lt;/p&gt;" style="html=1;whiteSpace=wrap;overflow=hidden;fillColor=none;strokeColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="150" y="750" width="240" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="PersistenciaCSV" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;PersistenciaCSV&amp;lt;T&amp;gt;&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- _rutaArchivo : string&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ Registrar(T)&lt;br&gt;+ Listar() : List&amp;lt;T&amp;gt;&lt;br&gt;+ Actualizar(id, T)&lt;br&gt;+ Eliminar(id)&lt;br&gt;- SobrescribirArchivo()&lt;/p&gt;" style="html=1;whiteSpace=wrap;overflow=hidden;fillColor=none;strokeColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="150" y="950" width="240" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="LoggingInterceptor" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;LoggingInterceptor&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ Intercept(IInvocation)&lt;/p&gt;" style="html=1;whiteSpace=wrap;overflow=hidden;fillColor=none;strokeColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="1150" width="200" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="ErrorHandlingInterceptor" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;ErrorHandlingInterceptor&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ Intercept(IInvocation)&lt;/p&gt;" style="html=1;whiteSpace=wrap;overflow=hidden;fillColor=none;strokeColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="300" y="1150" width="200" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="EventosDominio" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;EventosDominio&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ event VideojuegoCreado&lt;br&gt;+ event PedidoCreado&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ DispararVideojuegoCreado()&lt;br&gt;+ DispararPedidoCreado()&lt;/p&gt;" style="html=1;whiteSpace=wrap;overflow=hidden;fillColor=none;strokeColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="650" y="750" width="260" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="NotificadorEventos" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;NotificadorEventos&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ Suscribir()&lt;br&gt;- AlVideojuegoCreado()&lt;br&gt;- AlPedidoCreado()&lt;/p&gt;" style="html=1;whiteSpace=wrap;overflow=hidden;fillColor=none;strokeColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="650" y="950" width="260" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="ReportesFuncionales" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;ReportesFuncionales&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ CalcularValorInventario(Func)&lt;br&gt;+ MostrarReportePersonalizado()&lt;/p&gt;" style="html=1;whiteSpace=wrap;overflow=hidden;fillColor=none;strokeColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="1000" y="750" width="260" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="E1" style="endArrow=block;dashed=1;html=1;entryX=0.5;entryY=1;exitX=0.5;exitY=0;endFill=0;" parent="1" source="Producto" target="IEntidad" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="E2" style="endArrow=block;html=1;entryX=0.25;entryY=1;exitX=0.5;exitY=0;endFill=0;" parent="1" source="Videojuego" target="Producto" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="E3" style="endArrow=block;html=1;entryX=0.75;entryY=1;exitX=0.5;exitY=0;endFill=0;" parent="1" source="Consola" target="Producto" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="E4" style="endArrow=block;dashed=1;html=1;entryX=1;entryY=0.5;exitX=0;exitY=0.5;endFill=0;" parent="1" source="Cliente" target="IEntidad" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="E5" style="endArrow=block;dashed=1;html=1;entryX=1;entryY=0.75;exitX=0;exitY=0;endFill=0;" parent="1" source="Pedido" target="IEntidad" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="E6" style="endArrow=classic;html=1;entryX=0.5;entryY=1;exitX=0.5;exitY=0;endFill=1;" parent="1" source="Pedido" target="Cliente" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="E7" style="endArrow=classic;html=1;entryX=1;entryY=0;exitX=0;exitY=1;endFill=1;" parent="1" source="Pedido" target="Videojuego" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="E8" style="endArrow=block;dashed=1;html=1;entryX=0;entryY=0.5;exitX=0.5;exitY=0;endFill=0;" parent="1" source="Desarrolladora" target="IEntidad" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="E9" style="endArrow=classic;html=1;entryX=1;entryY=0.5;exitX=0;exitY=0.5;endFill=1;" parent="1" source="Videojuego" target="Desarrolladora" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="E10" style="endArrow=diamond;html=1;entryX=0.5;entryY=0;exitX=0.5;exitY=1;endFill=1;" parent="1" source="Videojuego" target="RequisitoSistema" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="E11" style="endArrow=diamond;html=1;entryX=0;entryY=0.5;exitX=1;exitY=0.5;endFill=0;" parent="1" source="Tienda" target="Producto" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="E12" style="endArrow=block;dashed=1;html=1;entryX=0.5;entryY=1;exitX=0.5;exitY=0;endFill=0;" parent="1" source="PersistenciaCSV" target="IPersistenciaCSV" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="E13" style="endArrow=open;dashed=1;html=1;entryX=0.5;entryY=0;exitX=0.25;exitY=1;endFill=0;" parent="1" source="PersistenciaCSV" target="LoggingInterceptor" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="E14" style="endArrow=open;dashed=1;html=1;entryX=0.5;entryY=0;exitX=0.75;exitY=1;endFill=0;" parent="1" source="PersistenciaCSV" target="ErrorHandlingInterceptor" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="E15" style="endArrow=open;html=1;entryX=0.5;entryY=1;exitX=0.5;exitY=0;endFill=0;" parent="1" source="NotificadorEventos" target="EventosDominio" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="E16" style="endArrow=open;dashed=1;html=1;entryX=1;entryY=1;exitX=0.25;exitY=0;endFill=0;" parent="1" source="ReportesFuncionales" target="Videojuego" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="E17" style="endArrow=open;dashed=1;html=1;entryX=0.75;entryY=1;exitX=0.25;exitY=0;endFill=0;" parent="1" source="EventosDominio" target="Videojuego" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="E18" style="endArrow=open;dashed=1;html=1;entryX=0.5;entryY=1;exitX=0.75;exitY=0;endFill=0;" parent="1" source="EventosDominio" target="Pedido" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="E19" style="endArrow=open;dashed=1;html=1;entryX=0.25;entryY=1;exitX=0.5;exitY=0;endFill=0;" parent="1" source="IPersistenciaCSV" target="Videojuego" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
